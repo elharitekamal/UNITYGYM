@@ -1,0 +1,47 @@
+<div class="flex min-h-screen items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500">
+  <div class="w-full max-w-xs p-8 space-y-6 bg-black rounded-lg">
+    <h1 class="text-3xl font-bold text-center text-white">Login</h1>
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="space-y-4">
+      <div>
+        <input
+            formControlName="userName"
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="Username"
+          type="text"
+        />
+      </div>
+      <div class="relative">
+        <input formControlName="password"
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="Password"
+          type="password"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="absolute right-3 top-3 text-white"
+        >
+          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+      </div>
+      
+      <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full bg-blue-500">
+        Log In
+      </button>
+    </form>
+    <p class="text-center text-sm text-white">
+      Don't have an account?
+      <a class="font-medium text-blue-200" routerLink="register">
+        Sign Up
+      </a>
+    </p>
+  </div>
+</div>
